@@ -1,0 +1,848 @@
+doctype html
+html(lang='en-US' prefix='og: https://ogp.me/ns#')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    link(rel='icon' href='/favicon-48x48.cbbd161b.png')
+    link(rel='apple-touch-icon' href='/apple-touch-icon.6803c6f0.png')
+    meta(name='theme-color' content='#ffffff')
+    link(rel='manifest' href='/manifest.56b1cedc.json')
+    link(rel='search' type='application/opensearchdescription+xml' href='/opensearch.xml' title='MDN Web Docs')
+    script Array.prototype.flat&&Array.prototype.includes||document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.flat%2Ces6"><\/script>')
+    title MDN Web Docs
+    meta(name='description' content='The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.')
+    meta(property='og:url' content='https://developer.mozilla.org')
+    meta(property='og:title' content='MDN Web Docs')
+    meta(property='og:description' content='The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.')
+    meta(property='og:locale' content='en-US')
+    meta(property='og:image' content='https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png')
+    meta(property='twitter:card' content='summary_large_image')
+    meta(name='robots' content='index, follow')
+    link(rel='canonical' href='https://developer.mozilla.org')
+    style(media='print') .breadcrumbs-container,.document-toc-container,.language-menu,.language-toggle,.on-github,.page-footer,.top-navigation-main,nav.sidebar,ul.prev-next{display:none!important}.main-page-content,.main-page-content pre{padding:2px}.main-page-content pre{border-left-width:2px}
+    link(href='https://developer.mozilla.org/static/css/main.1baf2b3e.chunk.css' rel='stylesheet')
+    script LUX=(function(){var a=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMarks)?LUX.gaMarks:[]);var d=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMeasures)?LUX.gaMeasures:[]);var j="LUX_start";var k=window.performance;var l=("undefined"!==typeof(LUX)&&LUX.ns?LUX.ns:(Date.now?Date.now():+(new Date())));if(k&&k.timing&&k.timing.navigationStart){l=k.timing.navigationStart}function f(){if(k&&k.now){return k.now()}var o=Date.now?Date.now():+(new Date());return o-l}function b(n){if(k){if(k.mark){return k.mark(n)}else{if(k.webkitMark){return k.webkitMark(n)}}}a.push({name:n,entryType:"mark",startTime:f(),duration:0});return}function m(p,t,n){if("undefined"===typeof(t)&&h(j)){t=j}if(k){if(k.measure){if(t){if(n){return k.measure(p,t,n)}else{return k.measure(p,t)}}else{return k.measure(p)}}else{if(k.webkitMeasure){return k.webkitMeasure(p,t,n)}}}var r=0,o=f();if(t){var s=h(t);if(s){r=s.startTime}else{if(k&&k.timing&&k.timing[t]){r=k.timing[t]-k.timing.navigationStart}else{return}}}if(n){var q=h(n);if(q){o=q.startTime}else{if(k&&k.timing&&k.timing[n]){o=k.timing[n]-k.timing.navigationStart}else{return}}}d.push({name:p,entryType:"measure",startTime:r,duration:(o-r)});return}function h(n){return c(n,g())}function c(p,o){for(i=o.length-1;i>=0;i--){var n=o[i];if(p===n.name){return n}}return undefined}function g(){if(k){if(k.getEntriesByType){return k.getEntriesByType("mark")}else{if(k.webkitGetEntriesByType){return k.webkitGetEntriesByType("mark")}}}return a}return{mark:b,measure:m,gaMarks:a,gaMeasures:d}})();LUX.ns=(Date.now?Date.now():+(new Date()));LUX.ac=[];LUX.cmd=function(a){LUX.ac.push(a)};LUX.init=function(){LUX.cmd(["init"])};LUX.send=function(){LUX.cmd(["send"])};LUX.addData=function(a,b){LUX.cmd(["addData",a,b])};LUX_ae=[];window.addEventListener("error",function(a){LUX_ae.push(a)});LUX_al=[];if("function"===typeof(PerformanceObserver)&&"function"===typeof(PerformanceLongTaskTiming)){var LongTaskObserver=new PerformanceObserver(function(c){var b=c.getEntries();for(var a=0;a<b.length;a++){var d=b[a];LUX_al.push(d)}});try{LongTaskObserver.observe({type:["longtask"]})}catch(e){}};
+    script(src='https://cdn.speedcurve.com/js/lux.js?id=108906238' async defer crossorigin='anonymous')
+  body
+    script const c={light:"#ffffff",dark:"#15141a"};if(window&&document.body){const o=window.localStorage.getItem("theme");o&&(document.body.className=o,document.body.style.backgroundColor=c[o])}
+    #root
+      ul#nav-access.a11y-nav
+        li
+          a#skip-main(href='#content') Skip to main content
+      .page-wrapper.category-home.standard-page
+        header.top-navigation.dark
+          .container
+            .top-navigation-wrap
+              a.logo(href='/en-US/' aria-label='MDN homepage')
+                svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 361 104.2')
+                  path(d='M197.6 73.2h-17.1v-5.5h3.8V51.9c0-3.7-.7-6.3-2.1-7.9-1.4-1.6-3.3-2.3-5.7-2.3-3.2 0-5.6 1.1-7.2 3.4s-2.4 4.6-2.5 6.9v15.6h6v5.5h-17.1v-5.5h3.8V51.9c0-3.8-.7-6.4-2.1-7.9-1.4-1.5-3.3-2.3-5.6-2.3-3.2 0-5.5 1.1-7.2 3.3-1.6 2.2-2.4 4.5-2.5 6.9v15.8h6.9v5.5h-20.2v-5.5h6V42.4h-6.1v-5.6h13.4v6.4c1.2-2.1 2.7-3.8 4.7-5.2 2-1.3 4.4-2 7.3-2s5.3.7 7.5 2.1c2.2 1.4 3.7 3.5 4.5 6.4 1.1-2.5 2.7-4.5 4.9-6.1s4.8-2.4 7.9-2.4c3.5 0 6.5 1.1 8.9 3.3s3.7 5.6 3.7 10.2v18.2h6.1v5.5zm42.5 0h-13.2V66c-1.2 2.2-2.8 4.1-4.9 5.6-2.1 1.6-4.8 2.4-8.3 2.4-4.8 0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3 0-5 1.3-9.6 4-13.7 2.6-4.1 6.9-6.2 12.8-6.2s9.8 2.2 12.3 6.5V22.7h-8.6v-5.6h15.8v50.6h6v5.5zm-13.3-16.8V52c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6 0-6.3 1.3-8.2 3.9-1.9 2.6-2.8 5.8-2.8 9.6 0 4.1 1 7.3 3 9.5s4.5 3.3 7.4 3.3c3.2 0 5.8-1.3 7.8-3.8 2.1-2.6 3.1-5.3 3.2-8zm61.5 16.8H269v-5.5h6V51.9c0-3.7-.7-6.3-2.2-7.9-1.4-1.6-3.4-2.3-5.7-2.3-3.1 0-5.6 1-7.4 3s-2.8 4.4-2.9 7v15.9h6v5.5h-19.3v-5.5h6V42.4h-6.2v-5.6h13.6V43c2.6-4.6 6.8-6.9 12.7-6.9 3.6 0 6.7 1.1 9.2 3.3s3.7 5.6 3.7 10.2v18.2h6v5.4h-.2z' fill='var(--text-primary)')
+                  path(d='M42 .2L13.4 92.3H1.7L30.2.2H42zm10.4 0v92.1H42V.2h10.4zm40.3 0L64.2 92.3H52.5L81 .2h11.7zm10.4 0v92.1H92.7V.2h10.4zM294 95h67v8.8h-67V95z' fill='var(--text-link)')
+              button.button.action.has-icon.main-menu-toggle(aria-expanded='false' aria-haspopup='menu' aria-label='Open main menu' title='Open main menu' type='button')
+                span.button-wrap
+                  span.icon.icon-menu
+                  span.visually-hidden Open main menu
+            .top-navigation-main
+              nav.main-nav(aria-label='Main menu')
+                ul.main-menu.nojs
+                  li.top-level-entry-container
+                    button#references-button.top-level-entry.menu-toggle(type='button' aria-haspopup='menu') References
+                    a.top-level-entry(href='/en-US/docs/Web') References
+                    ul.submenu.references.hidden(role='menu' aria-labelledby='references-button')
+                      li.apis-link-container.mobile-only(role='none')
+                        a.submenu-item(href='/en-US/docs/Web' role='menuitem')
+                          .submenu-icon
+                          .submenu-content-container
+                            .submenu-item-heading Overview / Web Technology
+                            p.submenu-item-description Web technology reference for developers
+                      li.html-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Web/HTML' role='menuitem')
+                          .submenu-icon.html
+                          .submenu-content-container
+                            .submenu-item-heading HTML
+                            p.submenu-item-description Structure of content on the web
+                      li.css-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Web/CSS' role='menuitem')
+                          .submenu-icon.css
+                          .submenu-content-container
+                            .submenu-item-heading CSS
+                            p.submenu-item-description Code used to describe document style
+                      li.javascript-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Web/JavaScript' role='menuitem')
+                          .submenu-icon.javascript
+                          .submenu-content-container
+                            .submenu-item-heading JavaScript
+                            p.submenu-item-description General-purpose scripting language
+                      li.http-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Web/HTTP' role='menuitem')
+                          .submenu-icon.http
+                          .submenu-content-container
+                            .submenu-item-heading HTTP
+                            p.submenu-item-description Protocol for transmitting web resources
+                      li.apis-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Web/API' role='menuitem')
+                          .submenu-icon.apis
+                          .submenu-content-container
+                            .submenu-item-heading Web APIs
+                            p.submenu-item-description Interfaces for building web applications
+                      li.apis-link-container.desktop-only(role='none')
+                        a.submenu-item(href='/en-US/docs/Web' role='menuitem')
+                          .submenu-icon
+                          .submenu-content-container
+                            .submenu-item-heading Web Technology
+                            p.submenu-item-description Web technology reference for developers
+                  li.top-level-entry-container
+                    button#guides-button.top-level-entry.menu-toggle(type='button' aria-haspopup='menu') Guides
+                    a.top-level-entry(href='/en-US/docs/Learn') Guides
+                    ul.submenu.guides.hidden(role='menu' aria-labelledby='guides-button')
+                      li.apis-link-container.mobile-only(role='none')
+                        a.submenu-item(href='/en-US/docs/Learn' role='menuitem')
+                          .submenu-icon.learn
+                          .submenu-content-container
+                            .submenu-item-heading Overview / MDN Learning Area
+                            p.submenu-item-description Learn web development
+                      li.apis-link-container.desktop-only(role='none')
+                        a.submenu-item(href='/en-US/docs/Learn' role='menuitem')
+                          .submenu-icon.learn
+                          .submenu-content-container
+                            .submenu-item-heading MDN Learning Area
+                            p.submenu-item-description Learn web development
+                      li.html-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Learn/HTML' role='menuitem')
+                          .submenu-icon.html
+                          .submenu-content-container
+                            .submenu-item-heading HTML
+                            p.submenu-item-description Learn to structure web content with HTML
+                      li.css-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Learn/CSS' role='menuitem')
+                          .submenu-icon.css
+                          .submenu-content-container
+                            .submenu-item-heading CSS
+                            p.submenu-item-description Learn to style content using CSS
+                      li.javascript-link-container(role='none')
+                        a.submenu-item(href='/en-US/docs/Learn/JavaScript' role='menuitem')
+                          .submenu-icon.javascript
+                          .submenu-content-container
+                            .submenu-item-heading JavaScript
+                            p.submenu-item-description Learn to run scripts in the browser
+                      li(role='none')
+                        a.submenu-item(href='/en-US/docs/Web/Accessibility' role='menuitem')
+                          .submenu-icon
+                          .submenu-content-container
+                            .submenu-item-heading Accessibility
+                            p.submenu-item-description Learn to make the web accessible to all
+                  li.top-level-entry-container
+                    button#mdn-plus-button.top-level-entry.menu-toggle(aria-haspopup='menu') MDN Plus
+                    a.top-level-entry(href='/en-US/plus') MDN Plus
+                    ul.submenu.mdn-plus.hidden(role='menu' aria-labelledby='mdn-plus-button')
+                      li.mobile-only(role='none')
+                        a.submenu-item(href='/en-US/plus' role='menuitem')
+                          .submenu-icon
+                          .submenu-content-container
+                            .submenu-item-heading Overview
+                            p.submenu-item-description More MDN. Your MDN.
+                      li(role='none')
+                        a.submenu-item(href='/en-US/plus/docs/faq' role='menuitem')
+                          .submenu-icon
+                          .submenu-content-container
+                            .submenu-item-heading FAQ
+                            p.submenu-item-description Frequently asked questions about MDN Plus
+              .header-search
+                form.search-form.search-widget#top-nav-search-form(action='/en-US/search' role='search' aria-haspopup='listbox' aria-owns='downshift-174-menu' aria-expanded='false')
+                  label.visually-hidden(for='top-nav-search-q') Search MDN
+                  input#top-nav-search-q.search-input-field(type='search' aria-autocomplete='list' aria-controls='downshift-174-menu' aria-labelledby='downshift-174-label' autocomplete='off' name='q' placeholder='   ' required)
+                  button.button.action.has-icon.clear-search-button(type='button')
+                    span.button-wrap
+                      span.icon.icon-cancel
+                      span.visually-hidden Clear search input
+                  button.button.action.has-icon.search-button(type='submit')
+                    span.button-wrap
+                      span.icon.icon-search
+                      span.visually-hidden Search
+                  #downshift-174-menu(role='listbox' aria-labelledby='downshift-174-label')
+              .theme-switcher-menu
+                button.button.action.has-icon.theme-switcher-menu.small(aria-controls='themes-menu' aria-haspopup='menu' type='button')
+                  span.button-wrap
+                    span.icon.icon-theme-os-default
+                    | Theme
+        main#content(role='main')
+          .homepage.mdn-ui-body-m
+            .homepage-hero.dark
+              section
+                h1
+                  | Resources for 
+                  u Developers
+                  | ,
+                  br
+                  | by Developers
+                p Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+                .homepage-hero-search
+                  form.search-form.search-widget#hp-search-form(action='/en-US/search' role='search' aria-haspopup='listbox' aria-owns='downshift-175-menu' aria-expanded='false')
+                    label.visually-hidden(for='hp-search-q') Search MDN
+                    input#hp-search-q.search-input-field(type='search' aria-autocomplete='list' aria-controls='downshift-175-menu' aria-labelledby='downshift-175-label' autocomplete='off' name='q' placeholder='   ' required)
+                    button.button.action.has-icon.clear-search-button(type='button')
+                      span.button-wrap
+                        span.icon.icon-cancel
+                        span.visually-hidden Clear search input
+                    button.button.action.has-icon.search-button(type='submit')
+                      span.button-wrap
+                        span.icon.icon-search
+                        span.visually-hidden Search
+                    #downshift-175-menu(role='listbox' aria-labelledby='downshift-175-label')
+              .mandala-container.homepage-hero-bg
+                .mandala-translate.mandala-rotate
+                  svg.mandala(width='675' height='675' viewBox='0 0 675 675' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    title Mandala
+                    defs
+                      path#circle1(d='M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0')
+                      path#circle2(d='M337.5,337.5 m-280,0 a280,280 0 1,1 560,0 a280,280 0 1,1 -560,0')
+                      path#circle3(d='M337.5,337.5 m-240,0 a240,240 0 1,1 480,0 a240,240 0 1,1 -480,0')
+                      path#circle4(d='M337.5,337.5 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0')
+                      path#circle5(d='M337.5,337.5 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0')
+                    text.mandala-accent-1(dy='70' textLength='2010')
+                      textPath(textLength='2010' href='#circle1')
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                    text.mandala-accent-2(dy='70' textLength='1760')
+                      textPath(textLength='1760' href='#circle2')
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                    text.mandala-accent-3(dy='70' textLength='1507')
+                      textPath(textLength='1507' href='#circle3')
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                    text.mandala-accent-4(dy='70' textLength='1257')
+                      textPath(textLength='1257' href='#circle4')    ../../    ../../    ../../    ../../    ../../    ../../    ../../
+                    text.mandala-accent-5(dy='70' textLength='1005')
+                      textPath(textLength='1005' href='#circle5')
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+            .featured-articles
+              h2.mdn-ui-emphasis-l Featured Articles
+              .tile-container
+                .article-tile
+                  a.tile-tag(href='/en-US/docs/Web/HTML') HTML
+                  a.tile-title.expand-this-link(href='/en-US/docs/Web/HTML/Element/dialog') <dialog>: The Dialog element
+                  p The <dialog> HTML element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
+                .article-tile
+                  a.tile-tag(href='/en-US/docs/Web/CSS') CSS
+                  a.tile-title.expand-this-link(href='/en-US/docs/Web/CSS/revert-layer') revert-layer
+                  p The revert-layer CSS keyword rolls back the value of a property in a cascade layer to the value of the property in a CSS rule matching the element in a previous cascade layer.
+                .article-tile
+                  a.tile-tag(href='/en-US/docs/Web/API') Web APIs
+                  a.tile-title.expand-this-link(href='/en-US/docs/Web/API/Canvas_API/Tutorial') Canvas tutorial
+                  p This tutorial describes how to use the <canvas> element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.
+            section.recent-contributions
+              h2.mdn-ui-emphasis-l Recent contributions
+              ul.contribution-list
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15032')
+                      | Update current node version in LA/Express
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 6 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15072')
+                      | Fix dead link
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 6 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15070')
+                      | fix link to store contract page
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 6 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15066')
+                      | Fixed typo from messageerror copypasta
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 7 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15060')
+                      | HTTP -> HTTPS
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 13 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15063')
+                      | Update redirected URLs from `*.mozilla.org` (part 10)
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 17 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15041')
+                      | Update redirected URLs from `*.mozilla.org` (part 9)
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 17 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/15012')
+                      | Update redirected URLs due to sites moved from `*.github.io` (part 8)
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 17 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/14976')
+                      | Update GitHub URL redirects due to repo name change such as 'mozilla' to 'mdn' (part 7)
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 18 hours ago
+                li.request-item
+                  p.request-title
+                    a(href='https://github.com/mdn/content/pull/14950')
+                      | Update GitHub URL redirects 'blob-tree' and 'tree-blob' (part 6)
+                      //  
+                      |  
+                    span
+                      a.request-repo(href='https://github.com/mdn/content') mdn/content
+                  span.request-date 18 hours ago
+            .contributor-spotlight.dark
+              .wrapper
+                .text-col
+                  h2.mdn-ui-emphasis-l Contributor Spotlight
+                  a.contributor-name(href='community/spotlight/tanner-dolby') Tanner Dolby
+                  blockquote
+                    span.icon.icon-quote
+                    | I contribute to MDN because our community is a welcoming and exciting group of people who are passionate about helping build a better Web.
+                  a.spotlight-cta(href='/en-US/community') Get involved →
+                figure.contributor-graphic
+                  img(width='523' height='323' src='/assets/mdn_contributor.png' alt='Tiled Mozilla Logo')
+              .mandala-container
+                .mandala-translate
+                  svg.mandala(width='675' height='675' viewBox='0 0 675 675' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    title Mandala
+                    defs
+                      path#circle1(d='M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0')
+                      path#circle2(d='M337.5,337.5 m-280,0 a280,280 0 1,1 560,0 a280,280 0 1,1 -560,0')
+                      path#circle3(d='M337.5,337.5 m-240,0 a240,240 0 1,1 480,0 a240,240 0 1,1 -480,0')
+                      path#circle4(d='M337.5,337.5 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0')
+                      path#circle5(d='M337.5,337.5 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0')
+                    text.mandala-accent-1(dy='70' textLength='2010')
+                      textPath(textLength='2010' href='#circle1')
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        |    /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                        | /
+                        tspan /
+                    text.mandala-accent-2(dy='70' textLength='1760')
+                      textPath(textLength='1760' href='#circle2')
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                        |   +
+                        tspan +
+                        | +
+                        tspan +
+                        | +
+                        tspan +
+                    text.mandala-accent-3(dy='70' textLength='1507')
+                      textPath(textLength='1507' href='#circle3')
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                        tspan {
+                        | {
+                        tspan {
+                        | { 
+                        tspan }
+                        | }
+                        tspan }
+                        | }  
+                    text.mandala-accent-4(dy='70' textLength='1257')
+                      textPath(textLength='1257' href='#circle4')    ../../    ../../    ../../    ../../    ../../    ../../    ../../
+                    text.mandala-accent-5(dy='70' textLength='1005')
+                      textPath(textLength='1005' href='#circle5')
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+                        tspan <>
+                        | </>
+      footer#nav-footer.page-footer
+        .page-footer-grid
+          .page-footer-logo-col
+            a.mdn-footer-logo(href='/' aria-label='MDN homepage')
+              svg(width='48' height='17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M20.04 16.512h-4.536v-6.096c0-.928-.16-1.592-.48-1.992-.304-.4-.76-.6-1.368-.6-.736 0-1.272.24-1.608.72-.32.48-.48 1.096-.48 1.848v3.792h1.44v2.328H8.472v-6.096c0-.928-.16-1.592-.48-1.992-.304-.4-.76-.6-1.368-.6-.752 0-1.288.24-1.608.72-.32.48-.48 1.096-.48 1.848v3.792H6.6v2.328H0v-2.328h1.44V8.04H.024V5.688h4.512V7.32c.688-1.232 1.784-1.848 3.288-1.848.784 0 1.504.192 2.16.576.656.384 1.112.968 1.368 1.752.64-1.552 1.816-2.328 3.528-2.328.976 0 1.84.304 2.592.912.752.608 1.128 1.552 1.128 2.832v4.968h1.44v2.328zM33.671 16.512h-4.536v-2.016a4.446 4.446 0 01-1.344 1.608c-.592.432-1.376.648-2.352.648-1.424 0-2.544-.488-3.36-1.464-.816-.976-1.224-2.304-1.224-3.984 0-1.616.4-2.992 1.2-4.128.8-1.136 2.008-1.704 3.624-1.704.88 0 1.6.176 2.16.528.56.352.992.8 1.296 1.344V2.352h-2.16V0h5.256v14.184h1.44v2.328zm-4.536-5.472v-.264c0-.896-.24-1.592-.72-2.088-.464-.512-1.048-.768-1.752-.768-.688 0-1.296.256-1.824.768-.512.512-.768 1.32-.768 2.424 0 1.04.24 1.832.72 2.376.48.544 1.048.816 1.704.816.816 0 1.456-.344 1.92-1.032.48-.688.72-1.432.72-2.232zM47.959 16.512h-5.976v-2.328h1.44v-3.768c0-.928-.16-1.592-.48-1.992-.304-.4-.76-.6-1.368-.6-.736 0-1.304.232-1.704.696-.4.448-.608 1.04-.624 1.776v3.888h1.44v2.328H34.71v-2.328h1.44V8.04h-1.56V5.688h4.656v1.656c.72-1.248 1.88-1.872 3.48-1.872 1.024 0 1.912.304 2.664.912.752.608 1.128 1.552 1.128 2.832v4.968h1.44v2.328z' fill='currentColor')
+            p Your blueprint for a better internet.
+            ul.social-icons
+              li
+                a.icon.icon-twitter(href='https://twitter.com/mozdevnet' target='_blank' rel='noopener noreferrer')
+                  span.visually-hidden MDN on Twitter
+              li
+                a.icon.icon-github-mark-small(href='https://github.com/mdn/' target='_blank' rel='noopener noreferrer')
+                  span.visually-hidden MDN on Github
+          .page-footer-nav-col-1
+            h2.footer-nav-heading MDN
+            ul.footer-nav-list
+              li.footer-nav-item
+                a(href='/en-US/about') About
+              li.footer-nav-item
+                a(href='https://hacks.mozilla.org/' target='_blank' rel='noopener noreferrer') Hacks Blog
+              li.footer-nav-item
+                a(href='https://www.mozilla.org/en-US/careers/listings/?team=Marketing' target='_blank' rel='noopener noreferrer') Careers
+          .page-footer-nav-col-2
+            h2.footer-nav-heading Support
+            ul.footer-nav-list
+              li.footer-nav-item
+                a.footer-nav-link(href='https://support.mozilla.org/products/mdn-plus') Product help
+              li.footer-nav-item
+                a.footer-nav-link(href='/en-US/docs/MDN/Contribute/Feedback#documentation_issues') Report a page issue
+              li.footer-nav-item
+                a.footer-nav-link(href='/en-US/docs/MDN/Contribute/Feedback#site_issues') Report a site issue
+          .page-footer-nav-col-3
+            h2.footer-nav-heading Our communities
+            ul.footer-nav-list
+              li.footer-nav-item
+                a.footer-nav-link(href='/en-US/community') MDN Community
+              li.footer-nav-item
+                a.footer-nav-link(href='https://discourse.mozilla.org/c/mdn/236' target='_blank' rel='noopener noreferrer') MDN Forum
+              li.footer-nav-item
+                a.footer-nav-link(href='https://wiki.mozilla.org/Matrix' target='_blank' rel='noopener noreferrer') MDN Chat
+          .page-footer-nav-col-4
+            h2.footer-nav-heading Developers
+            ul.footer-nav-list
+              li.footer-nav-item
+                a.footer-nav-link(href='/en-US/docs/Web') Web Technologies
+              li.footer-nav-item
+                a.footer-nav-link(href='/en-US/docs/Learn') Learn Web Development
+              li.footer-nav-item
+                a.footer-nav-link(href='/en-US/plus') MDN Plus
+          .page-footer-moz
+            a.footer-moz-logo-link(href='https://www.mozilla.org/' target='_blank' rel='noopener noreferrer')
+              svg(width='112' height='32' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M41.753 14.218c-2.048 0-3.324 1.522-3.324 4.157 0 2.423 1.119 4.286 3.29 4.286 2.082 0 3.447-1.678 3.447-4.347 0-2.826-1.522-4.096-3.413-4.096zm54.89 7.044c0 .901.437 1.618 1.645 1.618 1.427 0 2.949-1.024 3.044-3.352-.649-.095-1.365-.185-2.02-.185-1.426-.005-2.668.397-2.668 1.92z' fill='currentColor')
+                path(d='M0 0v32h111.908V0H0zm32.56 25.426h-5.87v-7.884c0-2.423-.806-3.352-2.39-3.352-1.924 0-2.702 1.365-2.702 3.324v4.868h1.864v3.044h-5.864v-7.884c0-2.423-.806-3.352-2.39-3.352-1.924 0-2.702 1.365-2.702 3.324v4.868h2.669v3.044H6.642v-3.044h1.863v-7.918H6.642V11.42h5.864v2.11c.839-1.489 2.3-2.39 4.252-2.39 2.02 0 3.878.963 4.566 3.01.778-1.862 2.361-3.01 4.566-3.01 2.512 0 4.812 1.522 4.812 4.84v6.402h1.863v3.044h-.005zm9.036.307c-4.314 0-7.296-2.635-7.296-7.106 0-4.096 2.484-7.481 7.514-7.481s7.481 3.38 7.481 7.29c0 4.472-3.228 7.297-7.699 7.297zm22.578-.307H51.942l-.403-2.11 7.7-8.846h-4.376l-.621 2.17-2.888-.313.498-4.907h12.294l.313 2.11-7.767 8.852h4.533l.654-2.172 3.167.308-.872 4.908zm7.99 0h-4.191v-5.03h4.19v5.03zm0-8.976h-4.191v-5.03h4.19v5.03zm2.618 8.976l6.054-21.358h3.945l-6.054 21.358h-3.945zm8.136 0l6.048-21.358h3.945l-6.054 21.358h-3.939zm21.486.307c-1.863 0-2.887-1.085-3.072-2.792-.805 1.427-2.232 2.792-4.498 2.792-2.02 0-4.314-1.085-4.314-4.006 0-3.447 3.323-4.253 6.518-4.253.778 0 1.584.034 2.3.124v-.465c0-1.427-.034-3.133-2.3-3.133-.84 0-1.488.061-2.143.402l-.453 1.578-3.195-.34.549-3.224c2.45-.996 3.692-1.27 5.992-1.27 3.01 0 5.556 1.55 5.556 4.75v6.083c0 .805.314 1.085.963 1.085.184 0 .375-.034.587-.095l.034 2.11a5.432 5.432 0 01-2.524.654z' fill='currentColor')
+            ul.footer-moz-list
+              li.footer-moz-item
+                a.footer-moz-link(href='https://www.mozilla.org/privacy/websites/' target='_blank' rel='noopener noreferrer') Website Privacy Notice
+              li.footer-moz-item
+                a.footer-moz-link(href='https://www.mozilla.org/privacy/websites/#cookies' target='_blank' rel='noopener noreferrer') Cookies
+              li.footer-moz-item
+                a.footer-moz-link(href='https://www.mozilla.org/about/legal/terms/mozilla' target='_blank' rel='noopener noreferrer') Legal
+              li.footer-moz-item
+                a.footer-moz-link(href='https://www.mozilla.org/about/governance/policies/participation/' target='_blank' rel='noopener noreferrer') Community Participation Guidelines
+          .page-footer-legal
+            p#license.page-footer-legal-text
+              | Visit
+              //  
+              |  
+              a(href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer') Mozilla Corporation’s
+              //  
+              |  not-for-profit parent, the
+              //  
+              |  
+              a(target='_blank' rel='noopener noreferrer' href='https://foundation.mozilla.org/') Mozilla Foundation
+              | .
+              br
+              | Portions of this content are ©1998–
+              //  
+              | 2022
+              //  
+              |  by individual mozilla.org contributors. Content available under
+              //  
+              |  
+              a(href='/docs/MDN/About#Copyrights_and_licenses') a Creative Commons license
+              | .
+    script#hydration(type='application/json') {"hyData":{"pullRequestsData":{"items":[{"url":"https://api.github.com/repos/mdn/content/issues/15032","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15032/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15032/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15032/events","html_url":"https://github.com/mdn/content/pull/15032","id":1205804970,"node_id":"PR_kwDOEaEoos42TXBv","number":15032,"title":"Update current node version in LA/Express","user":{"login":"sgadiyar06","id":65706904,"node_id":"MDQ6VXNlcjY1NzA2OTA0","avatar_url":"https://avatars.githubusercontent.com/u/65706904?v=4","gravatar_id":"","url":"https://api.github.com/users/sgadiyar06","html_url":"https://github.com/sgadiyar06","followers_url":"https://api.github.com/users/sgadiyar06/followers","following_url":"https://api.github.com/users/sgadiyar06/following{/other_user}","gists_url":"https://api.github.com/users/sgadiyar06/gists{/gist_id}","starred_url":"https://api.github.com/users/sgadiyar06/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sgadiyar06/subscriptions","organizations_url":"https://api.github.com/users/sgadiyar06/orgs","repos_url":"https://api.github.com/users/sgadiyar06/repos","events_url":"https://api.github.com/users/sgadiyar06/events{/privacy}","received_events_url":"https://api.github.com/users/sgadiyar06/received_events","type":"User","site_admin":false},"labels":[{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":3,"created_at":"2022-04-15T19:11:06Z","updated_at":"2022-04-17T18:18:12Z","closed_at":"2022-04-17T18:18:07Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15032","html_url":"https://github.com/mdn/content/pull/15032","diff_url":"https://github.com/mdn/content/pull/15032.diff","patch_url":"https://github.com/mdn/content/pull/15032.patch","merged_at":"2022-04-17T18:18:07Z"},"body":"Updated the current LTS and latest version of Node.js\r\n\r\n<!-- 👀 Thanks for opening a PR! Read comments like this one to get your PR merged faster. -->\r\n#### Summary\r\n<!-- ✍️ In a sentence or two, describe your changes -->\r\nUpdating the LTS version and the latest version of Node\r\n\r\n#### Motivation\r\n<!-- ❓ Why are you making this change? Help us understand how your changes help readers. -->\r\nKeeping it up to date\r\n\r\n#### Supporting details\r\n<!-- 🔗 Link to supporting information, such as bug trackers, source control, release notes, and vendor docs. -->\r\nCurrent LTS and latest version are obtained from the node [website](https://nodejs.org/en/)\r\n\r\n#### Related issues\r\n<!-- 🔨 If applicable, use \"Fixes #XYZ\" -->\r\n\r\n#### Metadata\r\n<!-- ✅ Check a box if applicable, like this: [x]\r\n\r\nThis PR…\r\n-->\r\n- [ ] Adds a new document\r\n- [ ] Rewrites (or significantly expands) a document\r\n- [x] Fixes a typo, bug, or other error\r\n\r\n<!-- 👷‍♀️ After submitting, review the results of the \"Checks\" tab! -->\r\n","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15032/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15032/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15072","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15072/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15072/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15072/events","html_url":"https://github.com/mdn/content/pull/15072","id":1206437075,"node_id":"PR_kwDOEaEoos42VJJe","number":15072,"title":"Fix dead link","user":{"login":"MrBrain295","id":66077254,"node_id":"MDQ6VXNlcjY2MDc3MjU0","avatar_url":"https://avatars.githubusercontent.com/u/66077254?v=4","gravatar_id":"","url":"https://api.github.com/users/MrBrain295","html_url":"https://github.com/MrBrain295","followers_url":"https://api.github.com/users/MrBrain295/followers","following_url":"https://api.github.com/users/MrBrain295/following{/other_user}","gists_url":"https://api.github.com/users/MrBrain295/gists{/gist_id}","starred_url":"https://api.github.com/users/MrBrain295/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MrBrain295/subscriptions","organizations_url":"https://api.github.com/users/MrBrain295/orgs","repos_url":"https://api.github.com/users/MrBrain295/repos","events_url":"https://api.github.com/users/MrBrain295/events{/privacy}","received_events_url":"https://api.github.com/users/MrBrain295/received_events","type":"User","site_admin":false},"labels":[{"id":2585475380,"node_id":"MDU6TGFiZWwyNTg1NDc1Mzgw","url":"https://api.github.com/repos/mdn/content/labels/Content:WebAPI","name":"Content:WebAPI","color":"f204a7","default":false,"description":"Web API docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":1,"created_at":"2022-04-17T17:23:19Z","updated_at":"2022-04-17T18:16:04Z","closed_at":"2022-04-17T18:15:45Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15072","html_url":"https://github.com/mdn/content/pull/15072","diff_url":"https://github.com/mdn/content/pull/15072.diff","patch_url":"https://github.com/mdn/content/pull/15072.patch","merged_at":"2022-04-17T18:15:45Z"},"body":"<!-- 👀 Thanks for opening a PR! Read comments like this one to get your PR merged faster. -->\r\n#### Summary\r\n<!-- ✍️ In a sentence or two, describe your changes -->\r\nFix dead link.\r\n#### Motivation\r\n<!-- ❓ Why are you making this change? Help us understand how your changes help readers. -->\r\nIt was wrong.\r\n#### Supporting details\r\n<!-- 🔗 Link to supporting information, such as bug trackers, source control, release notes, and vendor docs. -->\r\n\r\n#### Related issues\r\n<!-- 🔨 If applicable, use \"Fixes #XYZ\" -->\r\n\r\n#### Metadata\r\n<!-- ✅ Check a box if applicable, like this: [x]\r\n\r\nThis PR…\r\n-->\r\n- [ ] Adds a new document\r\n- [ ] Rewrites (or significantly expands) a document\r\n- [x] Fixes a typo, bug, or other error\r\n\r\n<!-- 👷‍♀️ After submitting, review the results of the \"Checks\" tab! -->\r\n","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15072/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15072/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15070","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15070/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15070/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15070/events","html_url":"https://github.com/mdn/content/pull/15070","id":1206359266,"node_id":"PR_kwDOEaEoos42U6D6","number":15070,"title":"fix link to store contract page","user":{"login":"gka","id":617518,"node_id":"MDQ6VXNlcjYxNzUxOA==","avatar_url":"https://avatars.githubusercontent.com/u/617518?v=4","gravatar_id":"","url":"https://api.github.com/users/gka","html_url":"https://github.com/gka","followers_url":"https://api.github.com/users/gka/followers","following_url":"https://api.github.com/users/gka/following{/other_user}","gists_url":"https://api.github.com/users/gka/gists{/gist_id}","starred_url":"https://api.github.com/users/gka/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/gka/subscriptions","organizations_url":"https://api.github.com/users/gka/orgs","repos_url":"https://api.github.com/users/gka/repos","events_url":"https://api.github.com/users/gka/events{/privacy}","received_events_url":"https://api.github.com/users/gka/received_events","type":"User","site_admin":false},"labels":[{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":2,"created_at":"2022-04-17T12:12:00Z","updated_at":"2022-04-17T18:15:40Z","closed_at":"2022-04-17T18:15:36Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15070","html_url":"https://github.com/mdn/content/pull/15070","diff_url":"https://github.com/mdn/content/pull/15070.diff","patch_url":"https://github.com/mdn/content/pull/15070.patch","merged_at":"2022-04-17T18:15:36Z"},"body":"#### Summary\r\nfixed broken link anchor to Svelte store contract page\r\n\r\n#### Motivation\r\nthe old link anchor was renamed\r\n\r\n\r\n\r\n#### Related issues\r\n<!-- 🔨 If applicable, use \"Fixes #XYZ\" -->\r\n\r\n#### Metadata\r\n<!-- ✅ Check a box if applicable, like this: [x]\r\n\r\nThis PR…\r\n-->\r\n- [ ] Adds a new document\r\n- [ ] Rewrites (or significantly expands) a document\r\n- [x] Fixes a typo, bug, or other error\r\n\r\n<!-- 👷‍♀️ After submitting, review the results of the \"Checks\" tab! -->\r\n","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15070/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15070/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15066","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15066/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15066/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15066/events","html_url":"https://github.com/mdn/content/pull/15066","id":1206289356,"node_id":"PR_kwDOEaEoos42UsmP","number":15066,"title":"Fixed typo from messageerror copypasta","user":{"login":"Pyrolistical","id":463642,"node_id":"MDQ6VXNlcjQ2MzY0Mg==","avatar_url":"https://avatars.githubusercontent.com/u/463642?v=4","gravatar_id":"","url":"https://api.github.com/users/Pyrolistical","html_url":"https://github.com/Pyrolistical","followers_url":"https://api.github.com/users/Pyrolistical/followers","following_url":"https://api.github.com/users/Pyrolistical/following{/other_user}","gists_url":"https://api.github.com/users/Pyrolistical/gists{/gist_id}","starred_url":"https://api.github.com/users/Pyrolistical/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Pyrolistical/subscriptions","organizations_url":"https://api.github.com/users/Pyrolistical/orgs","repos_url":"https://api.github.com/users/Pyrolistical/repos","events_url":"https://api.github.com/users/Pyrolistical/events{/privacy}","received_events_url":"https://api.github.com/users/Pyrolistical/received_events","type":"User","site_admin":false},"labels":[{"id":2585475380,"node_id":"MDU6TGFiZWwyNTg1NDc1Mzgw","url":"https://api.github.com/repos/mdn/content/labels/Content:WebAPI","name":"Content:WebAPI","color":"f204a7","default":false,"description":"Web API docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":2,"created_at":"2022-04-17T05:55:51Z","updated_at":"2022-04-17T17:19:14Z","closed_at":"2022-04-17T05:58:55Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15066","html_url":"https://github.com/mdn/content/pull/15066","diff_url":"https://github.com/mdn/content/pull/15066.diff","patch_url":"https://github.com/mdn/content/pull/15066.patch","merged_at":"2022-04-17T05:58:55Z"},"body":"<!-- 👀 Thanks for opening a PR! Read comments like this one to get your PR merged faster. -->\r\n#### Summary\r\n<!-- ✍️ In a sentence or two, describe your changes -->\r\nFixed typo, likely from messageerror copypasta\r\n#### Motivation\r\n<!-- ❓ Why are you making this change? Help us understand how your changes help readers. -->\r\n\r\n#### Supporting details\r\n<!-- 🔗 Link to supporting information, such as bug trackers, source control, release notes, and vendor docs. -->\r\n\r\n#### Related issues\r\n<!-- 🔨 If applicable, use \"Fixes #XYZ\" -->\r\n\r\n#### Metadata\r\n<!-- ✅ Check a box if applicable, like this: [x]\r\n\r\nThis PR…\r\n-->\r\n- [ ] Adds a new document\r\n- [ ] Rewrites (or significantly expands) a document\r\n- [x] Fixes a typo, bug, or other error\r\n\r\n<!-- 👷‍♀️ After submitting, review the results of the \"Checks\" tab! -->\r\n","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15066/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15066/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15060","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15060/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15060/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15060/events","html_url":"https://github.com/mdn/content/pull/15060","id":1206256043,"node_id":"PR_kwDOEaEoos42UmU2","number":15060,"title":"HTTP -> HTTPS","user":{"login":"MrBrain295","id":66077254,"node_id":"MDQ6VXNlcjY2MDc3MjU0","avatar_url":"https://avatars.githubusercontent.com/u/66077254?v=4","gravatar_id":"","url":"https://api.github.com/users/MrBrain295","html_url":"https://github.com/MrBrain295","followers_url":"https://api.github.com/users/MrBrain295/followers","following_url":"https://api.github.com/users/MrBrain295/following{/other_user}","gists_url":"https://api.github.com/users/MrBrain295/gists{/gist_id}","starred_url":"https://api.github.com/users/MrBrain295/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MrBrain295/subscriptions","organizations_url":"https://api.github.com/users/MrBrain295/orgs","repos_url":"https://api.github.com/users/MrBrain295/repos","events_url":"https://api.github.com/users/MrBrain295/events{/privacy}","received_events_url":"https://api.github.com/users/MrBrain295/received_events","type":"User","site_admin":false},"labels":[{"id":2585244352,"node_id":"MDU6TGFiZWwyNTg1MjQ0MzUy","url":"https://api.github.com/repos/mdn/content/labels/Content:HTML","name":"Content:HTML","color":"FBCA04","default":false,"description":"Hypertext Markup Language docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":1,"created_at":"2022-04-17T01:44:10Z","updated_at":"2022-04-17T11:48:48Z","closed_at":"2022-04-17T04:05:22Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15060","html_url":"https://github.com/mdn/content/pull/15060","diff_url":"https://github.com/mdn/content/pull/15060.diff","patch_url":"https://github.com/mdn/content/pull/15060.patch","merged_at":"2022-04-17T04:05:22Z"},"body":"<!-- 👀 Thanks for opening a PR! Read comments like this one to get your PR merged faster. -->\r\n#### Summary\r\n<!-- ✍️ In a sentence or two, describe your changes -->\r\nHTTP -> HTTPS\r\n#### Motivation\r\n<!-- ❓ Why are you making this change? Help us understand how your changes help readers. -->\r\nIt was wrong.\r\n#### Supporting details\r\n<!-- 🔗 Link to supporting information, such as bug trackers, source control, release notes, and vendor docs. -->\r\n\r\n#### Related issues\r\n<!-- 🔨 If applicable, use \"Fixes #XYZ\" -->\r\n\r\n#### Metadata\r\n<!-- ✅ Check a box if applicable, like this: [x]\r\n\r\nThis PR…\r\n-->\r\n- [ ] Adds a new document\r\n- [ ] Rewrites (or significantly expands) a document\r\n- [x] Fixes a typo, bug, or other error\r\n\r\n<!-- 👷‍♀️ After submitting, review the results of the \"Checks\" tab! -->\r\n","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15060/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15060/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15063","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15063/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15063/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15063/events","html_url":"https://github.com/mdn/content/pull/15063","id":1206265503,"node_id":"PR_kwDOEaEoos42UoIn","number":15063,"title":"Update redirected URLs from `*.mozilla.org` (part 10)","user":{"login":"OnkarRuikar","id":87750369,"node_id":"MDQ6VXNlcjg3NzUwMzY5","avatar_url":"https://avatars.githubusercontent.com/u/87750369?v=4","gravatar_id":"","url":"https://api.github.com/users/OnkarRuikar","html_url":"https://github.com/OnkarRuikar","followers_url":"https://api.github.com/users/OnkarRuikar/followers","following_url":"https://api.github.com/users/OnkarRuikar/following{/other_user}","gists_url":"https://api.github.com/users/OnkarRuikar/gists{/gist_id}","starred_url":"https://api.github.com/users/OnkarRuikar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OnkarRuikar/subscriptions","organizations_url":"https://api.github.com/users/OnkarRuikar/orgs","repos_url":"https://api.github.com/users/OnkarRuikar/repos","events_url":"https://api.github.com/users/OnkarRuikar/events{/privacy}","received_events_url":"https://api.github.com/users/OnkarRuikar/received_events","type":"User","site_admin":false},"labels":[{"id":2585188800,"node_id":"MDU6TGFiZWwyNTg1MTg4ODAw","url":"https://api.github.com/repos/mdn/content/labels/Content:CSS","name":"Content:CSS","color":"008672","default":false,"description":"Cascading Style Sheets docs"},{"id":2585475380,"node_id":"MDU6TGFiZWwyNTg1NDc1Mzgw","url":"https://api.github.com/repos/mdn/content/labels/Content:WebAPI","name":"Content:WebAPI","color":"f204a7","default":false,"description":"Web API docs"},{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"},{"id":2588298473,"node_id":"MDU6TGFiZWwyNTg4Mjk4NDcz","url":"https://api.github.com/repos/mdn/content/labels/Content:Other","name":"Content:Other","color":"9adaf9","default":false,"description":"Any docs not covered by another \"Content:\" label"},{"id":2588358303,"node_id":"MDU6TGFiZWwyNTg4MzU4MzAz","url":"https://api.github.com/repos/mdn/content/labels/Content:HTTP","name":"Content:HTTP","color":"6e7c01","default":false,"description":"HTTP docs"},{"id":2593649710,"node_id":"MDU6TGFiZWwyNTkzNjQ5NzEw","url":"https://api.github.com/repos/mdn/content/labels/Content:Accessibility","name":"Content:Accessibility","color":"65AFC3","default":false,"description":"Accessibility docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":1,"created_at":"2022-04-17T02:53:23Z","updated_at":"2022-04-17T06:57:13Z","closed_at":"2022-04-17T05:45:52Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15063","html_url":"https://github.com/mdn/content/pull/15063","diff_url":"https://github.com/mdn/content/pull/15063.diff","patch_url":"https://github.com/mdn/content/pull/15063.patch","merged_at":"2022-04-17T05:45:52Z"},"body":"Extending #14055\r\n\r\n## Summary\r\n\r\nUpdated redirected URLs related to `*.mozilla.org`.\r\n\r\n#### Metadata\r\n- [x] Fixes a typo, bug, or other error","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15063/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15063/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15041","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15041/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15041/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15041/events","html_url":"https://github.com/mdn/content/pull/15041","id":1205990796,"node_id":"PR_kwDOEaEoos42T5ZF","number":15041,"title":"Update redirected URLs from `*.mozilla.org` (part 9)","user":{"login":"OnkarRuikar","id":87750369,"node_id":"MDQ6VXNlcjg3NzUwMzY5","avatar_url":"https://avatars.githubusercontent.com/u/87750369?v=4","gravatar_id":"","url":"https://api.github.com/users/OnkarRuikar","html_url":"https://github.com/OnkarRuikar","followers_url":"https://api.github.com/users/OnkarRuikar/followers","following_url":"https://api.github.com/users/OnkarRuikar/following{/other_user}","gists_url":"https://api.github.com/users/OnkarRuikar/gists{/gist_id}","starred_url":"https://api.github.com/users/OnkarRuikar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OnkarRuikar/subscriptions","organizations_url":"https://api.github.com/users/OnkarRuikar/orgs","repos_url":"https://api.github.com/users/OnkarRuikar/repos","events_url":"https://api.github.com/users/OnkarRuikar/events{/privacy}","received_events_url":"https://api.github.com/users/OnkarRuikar/received_events","type":"User","site_admin":false},"labels":[{"id":2585320905,"node_id":"MDU6TGFiZWwyNTg1MzIwOTA1","url":"https://api.github.com/repos/mdn/content/labels/Content:WebExt","name":"Content:WebExt","color":"442be5","default":false,"description":"WebExtensions docs"},{"id":2585554720,"node_id":"MDU6TGFiZWwyNTg1NTU0NzIw","url":"https://api.github.com/repos/mdn/content/labels/Content:JS","name":"Content:JS","color":"b50012","default":false,"description":"JavaScript docs"},{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"},{"id":2588298473,"node_id":"MDU6TGFiZWwyNTg4Mjk4NDcz","url":"https://api.github.com/repos/mdn/content/labels/Content:Other","name":"Content:Other","color":"9adaf9","default":false,"description":"Any docs not covered by another \"Content:\" label"},{"id":2824753632,"node_id":"MDU6TGFiZWwyODI0NzUzNjMy","url":"https://api.github.com/repos/mdn/content/labels/Content:wasm","name":"Content:wasm","color":"29ED02","default":false,"description":"WebAssembly docs"},{"id":3062594737,"node_id":"MDU6TGFiZWwzMDYyNTk0NzM3","url":"https://api.github.com/repos/mdn/content/labels/Content:MathML","name":"Content:MathML","color":"7F7413","default":false,"description":"MathML docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":2,"created_at":"2022-04-16T02:52:46Z","updated_at":"2022-04-17T06:57:03Z","closed_at":"2022-04-16T05:48:59Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15041","html_url":"https://github.com/mdn/content/pull/15041","diff_url":"https://github.com/mdn/content/pull/15041.diff","patch_url":"https://github.com/mdn/content/pull/15041.patch","merged_at":"2022-04-16T05:48:59Z"},"body":"Extending #14055\r\n\r\n## Summary\r\n\r\nUpdated redirected URLs related to `*.mozilla.org`.\r\n\r\n#### Metadata\r\n- [x] Fixes a typo, bug, or other error","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15041/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15041/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/15012","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/15012/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/15012/comments","events_url":"https://api.github.com/repos/mdn/content/issues/15012/events","html_url":"https://github.com/mdn/content/pull/15012","id":1205193267,"node_id":"PR_kwDOEaEoos42RX5x","number":15012,"title":"Update redirected URLs due to sites moved from `*.github.io` (part 8)","user":{"login":"OnkarRuikar","id":87750369,"node_id":"MDQ6VXNlcjg3NzUwMzY5","avatar_url":"https://avatars.githubusercontent.com/u/87750369?v=4","gravatar_id":"","url":"https://api.github.com/users/OnkarRuikar","html_url":"https://github.com/OnkarRuikar","followers_url":"https://api.github.com/users/OnkarRuikar/followers","following_url":"https://api.github.com/users/OnkarRuikar/following{/other_user}","gists_url":"https://api.github.com/users/OnkarRuikar/gists{/gist_id}","starred_url":"https://api.github.com/users/OnkarRuikar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OnkarRuikar/subscriptions","organizations_url":"https://api.github.com/users/OnkarRuikar/orgs","repos_url":"https://api.github.com/users/OnkarRuikar/repos","events_url":"https://api.github.com/users/OnkarRuikar/events{/privacy}","received_events_url":"https://api.github.com/users/OnkarRuikar/received_events","type":"User","site_admin":false},"labels":[{"id":2585188800,"node_id":"MDU6TGFiZWwyNTg1MTg4ODAw","url":"https://api.github.com/repos/mdn/content/labels/Content:CSS","name":"Content:CSS","color":"008672","default":false,"description":"Cascading Style Sheets docs"},{"id":2585320905,"node_id":"MDU6TGFiZWwyNTg1MzIwOTA1","url":"https://api.github.com/repos/mdn/content/labels/Content:WebExt","name":"Content:WebExt","color":"442be5","default":false,"description":"WebExtensions docs"},{"id":2585475380,"node_id":"MDU6TGFiZWwyNTg1NDc1Mzgw","url":"https://api.github.com/repos/mdn/content/labels/Content:WebAPI","name":"Content:WebAPI","color":"f204a7","default":false,"description":"Web API docs"},{"id":2585554720,"node_id":"MDU6TGFiZWwyNTg1NTU0NzIw","url":"https://api.github.com/repos/mdn/content/labels/Content:JS","name":"Content:JS","color":"b50012","default":false,"description":"JavaScript docs"},{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"},{"id":2588298473,"node_id":"MDU6TGFiZWwyNTg4Mjk4NDcz","url":"https://api.github.com/repos/mdn/content/labels/Content:Other","name":"Content:Other","color":"9adaf9","default":false,"description":"Any docs not covered by another \"Content:\" label"},{"id":2588358303,"node_id":"MDU6TGFiZWwyNTg4MzU4MzAz","url":"https://api.github.com/repos/mdn/content/labels/Content:HTTP","name":"Content:HTTP","color":"6e7c01","default":false,"description":"HTTP docs"},{"id":2636068702,"node_id":"MDU6TGFiZWwyNjM2MDY4NzAy","url":"https://api.github.com/repos/mdn/content/labels/Content:SVG","name":"Content:SVG","color":"0052CC","default":false,"description":"SVG docs"},{"id":2679158543,"node_id":"MDU6TGFiZWwyNjc5MTU4NTQz","url":"https://api.github.com/repos/mdn/content/labels/Content:Media","name":"Content:Media","color":"592477","default":false,"description":"Media docs"},{"id":3098888485,"node_id":"MDU6TGFiZWwzMDk4ODg4NDg1","url":"https://api.github.com/repos/mdn/content/labels/Content:Glossary","name":"Content:Glossary","color":"C2E0C6","default":false,"description":"Glossary entries"},{"id":3298614841,"node_id":"MDU6TGFiZWwzMjk4NjE0ODQx","url":"https://api.github.com/repos/mdn/content/labels/Content:WebDriver","name":"Content:WebDriver","color":"d93f0b","default":false,"description":"WebDriver docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":1,"created_at":"2022-04-15T02:40:29Z","updated_at":"2022-04-17T06:56:42Z","closed_at":"2022-04-15T05:42:19Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/15012","html_url":"https://github.com/mdn/content/pull/15012","diff_url":"https://github.com/mdn/content/pull/15012.diff","patch_url":"https://github.com/mdn/content/pull/15012.patch","merged_at":"2022-04-15T05:42:19Z"},"body":"Extending #14055\r\n\r\n## Summary\r\n\r\nUpdated redirected URLs because the sites changed their domain name, mainly from `*.github.io`. \r\n\r\n#### Metadata\r\n- [x] Fixes a typo, bug, or other error","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/15012/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/15012/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/14976","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/14976/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/14976/comments","events_url":"https://api.github.com/repos/mdn/content/issues/14976/events","html_url":"https://github.com/mdn/content/pull/14976","id":1203972728,"node_id":"PR_kwDOEaEoos42Nhc-","number":14976,"title":"Update GitHub URL redirects due to repo name change such as 'mozilla' to 'mdn' (part 7)","user":{"login":"OnkarRuikar","id":87750369,"node_id":"MDQ6VXNlcjg3NzUwMzY5","avatar_url":"https://avatars.githubusercontent.com/u/87750369?v=4","gravatar_id":"","url":"https://api.github.com/users/OnkarRuikar","html_url":"https://github.com/OnkarRuikar","followers_url":"https://api.github.com/users/OnkarRuikar/followers","following_url":"https://api.github.com/users/OnkarRuikar/following{/other_user}","gists_url":"https://api.github.com/users/OnkarRuikar/gists{/gist_id}","starred_url":"https://api.github.com/users/OnkarRuikar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OnkarRuikar/subscriptions","organizations_url":"https://api.github.com/users/OnkarRuikar/orgs","repos_url":"https://api.github.com/users/OnkarRuikar/repos","events_url":"https://api.github.com/users/OnkarRuikar/events{/privacy}","received_events_url":"https://api.github.com/users/OnkarRuikar/received_events","type":"User","site_admin":false},"labels":[{"id":2585188800,"node_id":"MDU6TGFiZWwyNTg1MTg4ODAw","url":"https://api.github.com/repos/mdn/content/labels/Content:CSS","name":"Content:CSS","color":"008672","default":false,"description":"Cascading Style Sheets docs"},{"id":2585244352,"node_id":"MDU6TGFiZWwyNTg1MjQ0MzUy","url":"https://api.github.com/repos/mdn/content/labels/Content:HTML","name":"Content:HTML","color":"FBCA04","default":false,"description":"Hypertext Markup Language docs"},{"id":2585320905,"node_id":"MDU6TGFiZWwyNTg1MzIwOTA1","url":"https://api.github.com/repos/mdn/content/labels/Content:WebExt","name":"Content:WebExt","color":"442be5","default":false,"description":"WebExtensions docs"},{"id":2585475380,"node_id":"MDU6TGFiZWwyNTg1NDc1Mzgw","url":"https://api.github.com/repos/mdn/content/labels/Content:WebAPI","name":"Content:WebAPI","color":"f204a7","default":false,"description":"Web API docs"},{"id":2585554720,"node_id":"MDU6TGFiZWwyNTg1NTU0NzIw","url":"https://api.github.com/repos/mdn/content/labels/Content:JS","name":"Content:JS","color":"b50012","default":false,"description":"JavaScript docs"},{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"},{"id":2588298473,"node_id":"MDU6TGFiZWwyNTg4Mjk4NDcz","url":"https://api.github.com/repos/mdn/content/labels/Content:Other","name":"Content:Other","color":"9adaf9","default":false,"description":"Any docs not covered by another \"Content:\" label"},{"id":2588358303,"node_id":"MDU6TGFiZWwyNTg4MzU4MzAz","url":"https://api.github.com/repos/mdn/content/labels/Content:HTTP","name":"Content:HTTP","color":"6e7c01","default":false,"description":"HTTP docs"},{"id":3062594737,"node_id":"MDU6TGFiZWwzMDYyNTk0NzM3","url":"https://api.github.com/repos/mdn/content/labels/Content:MathML","name":"Content:MathML","color":"7F7413","default":false,"description":"MathML docs"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":1,"created_at":"2022-04-14T02:43:08Z","updated_at":"2022-04-17T06:56:01Z","closed_at":"2022-04-14T03:51:38Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/14976","html_url":"https://github.com/mdn/content/pull/14976","diff_url":"https://github.com/mdn/content/pull/14976.diff","patch_url":"https://github.com/mdn/content/pull/14976.patch","merged_at":"2022-04-14T03:51:37Z"},"body":"Extending #14055\r\n\r\n## Summary\r\n\r\nURLs from `github.com` which are are being redirected due to repository name changes.\r\nFor example, `mozilla` to `mdn` and `kripken` to `emscripten-core`\r\n\r\n\r\n#### Metadata\r\n- [x] Fixes a typo, bug, or other error","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/14976/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/14976/timeline","performed_via_github_app":null,"score":1},{"url":"https://api.github.com/repos/mdn/content/issues/14950","repository_url":"https://api.github.com/repos/mdn/content","labels_url":"https://api.github.com/repos/mdn/content/issues/14950/labels{/name}","comments_url":"https://api.github.com/repos/mdn/content/issues/14950/comments","events_url":"https://api.github.com/repos/mdn/content/issues/14950/events","html_url":"https://github.com/mdn/content/pull/14950","id":1202683352,"node_id":"PR_kwDOEaEoos42JWs8","number":14950,"title":"Update GitHub URL redirects 'blob-tree' and 'tree-blob' (part 6)","user":{"login":"OnkarRuikar","id":87750369,"node_id":"MDQ6VXNlcjg3NzUwMzY5","avatar_url":"https://avatars.githubusercontent.com/u/87750369?v=4","gravatar_id":"","url":"https://api.github.com/users/OnkarRuikar","html_url":"https://github.com/OnkarRuikar","followers_url":"https://api.github.com/users/OnkarRuikar/followers","following_url":"https://api.github.com/users/OnkarRuikar/following{/other_user}","gists_url":"https://api.github.com/users/OnkarRuikar/gists{/gist_id}","starred_url":"https://api.github.com/users/OnkarRuikar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OnkarRuikar/subscriptions","organizations_url":"https://api.github.com/users/OnkarRuikar/orgs","repos_url":"https://api.github.com/users/OnkarRuikar/repos","events_url":"https://api.github.com/users/OnkarRuikar/events{/privacy}","received_events_url":"https://api.github.com/users/OnkarRuikar/received_events","type":"User","site_admin":false},"labels":[{"id":2585475380,"node_id":"MDU6TGFiZWwyNTg1NDc1Mzgw","url":"https://api.github.com/repos/mdn/content/labels/Content:WebAPI","name":"Content:WebAPI","color":"f204a7","default":false,"description":"Web API docs"},{"id":2586167783,"node_id":"MDU6TGFiZWwyNTg2MTY3Nzgz","url":"https://api.github.com/repos/mdn/content/labels/Content:Learn","name":"Content:Learn","color":"5846ba","default":false,"description":"Learning area docs"},{"id":2588298473,"node_id":"MDU6TGFiZWwyNTg4Mjk4NDcz","url":"https://api.github.com/repos/mdn/content/labels/Content:Other","name":"Content:Other","color":"9adaf9","default":false,"description":"Any docs not covered by another \"Content:\" label"}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":1,"created_at":"2022-04-13T02:53:34Z","updated_at":"2022-04-17T06:55:46Z","closed_at":"2022-04-13T05:17:59Z","author_association":"CONTRIBUTOR","active_lock_reason":null,"draft":false,"pull_request":{"url":"https://api.github.com/repos/mdn/content/pulls/14950","html_url":"https://github.com/mdn/content/pull/14950","diff_url":"https://github.com/mdn/content/pull/14950.diff","patch_url":"https://github.com/mdn/content/pull/14950.patch","merged_at":"2022-04-13T05:17:59Z"},"body":"Extending #14055\r\n\r\n## Summary\r\n\r\nURLs from `github.com` which are are being redirected from `blob` to `tree` and `tree` to `blob`.\r\nIf GitHub stops the redirection, all the links will break.\r\n\r\nUpdating the links as follows:\r\nFor directories,\r\n`/blob/` -> `/tree/`\r\nFor files,\r\n`/tree/` -> `/blob/`\r\nTo understand the difference between file and directory links refer [this](https://stackoverflow.com/questions/39400848/in-github-urls-what-is-the-difference-between-a-tree-and-a-blob) discussion.\r\n\r\n\r\n#### Metadata\r\n- [x] Fixes a typo, bug, or other error","reactions":{"url":"https://api.github.com/repos/mdn/content/issues/14950/reactions","total_count":0,"+1":0,"-1":0,"laugh":0,"hooray":0,"confused":0,"heart":0,"rocket":0,"eyes":0},"timeline_url":"https://api.github.com/repos/mdn/content/issues/14950/timeline","performed_via_github_app":null,"score":1}],"repo":{"name":"mdn/content","url":"https://github.com/mdn/content"}},"featuredContributor":{"contributorName":"Tanner Dolby","url":"community/spotlight/tanner-dolby","quote":"I contribute to MDN because our community is a welcoming and exciting group of people who are passionate about helping build a better Web."}}}
